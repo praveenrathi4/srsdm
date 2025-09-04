@@ -64,24 +64,27 @@ p {
 .btn-primary {
     background: linear-gradient(135deg, #2c5530, #4a7c59);
     color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .btn-primary:hover {
     background: linear-gradient(135deg, #1e3a21, #3a5f47);
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(44, 85, 48, 0.3);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .btn-secondary {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.9);
     color: #2c5530;
-    border: 2px solid #2c5530;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .btn-secondary:hover {
-    background: #2c5530;
-    color: white;
+    background: white;
+    color: #2c5530;
     transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 .btn-outline {
@@ -184,10 +187,12 @@ p {
 /* Hero Section */
 .hero {
     min-height: 100vh;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    background: linear-gradient(135deg, rgba(44, 85, 48, 0.8) 0%, rgba(74, 124, 89, 0.7) 100%), 
+                url('https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
     display: flex;
     align-items: center;
     padding-top: 80px;
+    position: relative;
 }
 
 .hero-container {
@@ -201,26 +206,30 @@ p {
 }
 
 .hero-content h1 {
-    color: #2c5530;
+    color: white;
     margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-content h2 {
-    color: #4a7c59;
+    color: #f8f9fa;
     font-size: 2rem;
     margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .hero-subtitle {
-    color: #666;
+    color: #e9ecef;
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .hero-description {
     font-size: 1.1rem;
     margin-bottom: 2rem;
-    color: #555;
+    color: #f8f9fa;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .hero-buttons {
@@ -238,17 +247,20 @@ p {
 .hero-placeholder {
     width: 300px;
     height: 300px;
-    background: linear-gradient(135deg, #2c5530, #4a7c59);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 20px 40px rgba(44, 85, 48, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .hero-placeholder i {
     font-size: 6rem;
     color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Section Headers */
