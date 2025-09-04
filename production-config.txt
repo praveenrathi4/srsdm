@@ -23,10 +23,10 @@ SESSION_SECRET=your-session-secret
 # Analytics (Optional)
 GOOGLE_ANALYTICS_ID=your-ga-id
 
-# Social Media Links (Update these with actual URLs)
-FACEBOOK_URL=https://facebook.com/drmkgahlot
-INSTAGRAM_URL=https://instagram.com/drmkgahlot
-YOUTUBE_URL=https://youtube.com/@drmkgahlot
+# Social Media Links (Actual URLs for Dr. MK Gahlot)
+FACEBOOK_URL=https://www.facebook.com/Drgahlot14/
+INSTAGRAM_URL=https://www.instagram.com/mgahlot14/
+YOUTUBE_URL=https://www.youtube.com/@DRMKGAHLOT
 
 # Contact Information
 DOCTOR_EMAIL=drmkgahlot@gmail.com
