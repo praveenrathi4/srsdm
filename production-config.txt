@@ -1,0 +1,34 @@
+# Production Environment Variables for SRSDM Website
+# Copy these to your hosting platform's environment variables section
+
+# Email Configuration (Required for contact form notifications)
+EMAIL_USER=your-email@gmail.com
+EMAIL_PASS=your-gmail-app-password
+
+# Server Configuration
+NODE_ENV=production
+PORT=3000
+
+# WhatsApp Configuration (Optional - for future implementation)
+WHATSAPP_API_KEY=your-whatsapp-api-key
+WHATSAPP_PHONE=+918233666311
+
+# Database Configuration (Optional - for future features)
+DATABASE_URL=your-database-url
+
+# Security (Optional)
+JWT_SECRET=your-jwt-secret-key
+SESSION_SECRET=your-session-secret
+
+# Analytics (Optional)
+GOOGLE_ANALYTICS_ID=your-ga-id
+
+# Social Media Links (Update these with actual URLs)
+FACEBOOK_URL=https://facebook.com/drmkgahlot
+INSTAGRAM_URL=https://instagram.com/drmkgahlot
+YOUTUBE_URL=https://youtube.com/@drmkgahlot
+
+# Contact Information
+DOCTOR_EMAIL=drmkgahlot@gmail.com
+DOCTOR_PHONE=+918233666311
+CLINIC_ADDRESS=Gadsisar Road, Bikaner-334001, Rajasthan

@@ -1,0 +1,43 @@
+{
+  "name": "srsdm-website",
+  "version": "1.0.0",
+  "description": "Official website for Dr. MK Gahlot - Ayurvedic Doctor at SRSDM clinic",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build": "echo 'No build process needed for static site'",
+    "test": "echo 'No tests specified'"
+  },
+  "keywords": [
+    "ayurveda",
+    "doctor",
+    "healthcare",
+    "wellness",
+    "bikaner",
+    "rajasthan",
+    "srsdm"
+  ],
+  "author": "Dr. MK Gahlot - SRSDM",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/drmkgahlot/srsdm-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/drmkgahlot/srsdm-website/issues"
+  },
+  "homepage": "https://drmkgahlot.com"
+}
