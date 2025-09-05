@@ -892,10 +892,6 @@ p {
         flex-shrink: 0;
     }
     
-    .contact-item > div {
-        text-align: left;
-    }
-    
     .contact-item h4 {
         margin-bottom: 0.3rem;
     }
