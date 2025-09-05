@@ -188,7 +188,7 @@ p {
 .hero {
     min-height: 100vh;
     background: linear-gradient(135deg, rgba(44, 85, 48, 0.7) 0%, rgba(74, 124, 89, 0.6) 100%), 
-                url('./assets/images/ayurveda.jpg') center/cover no-repeat,
+                url('https://www.vachmi.com/images/ayurveda.jpg') center/cover no-repeat,
                 linear-gradient(135deg, #2c5530 0%, #4a7c59 100%);
     display: flex;
     align-items: center;
