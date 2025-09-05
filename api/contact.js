@@ -17,7 +17,7 @@ const WHATSAPP_PHONE = '+918233666311'; // DR MK GAHLOT's phone number
 async function sendEmailNotification(contactData) {
     const mailOptions = {
         from: process.env.EMAIL_USER || 'your-email@gmail.com',
-        to: 'drmkgahlot@gmail.com', // Replace with DR MK GAHLOT's email
+        to: 'rathipra@gmail.com', // Email notifications sent to rathipra@gmail.com
         subject: `New Contact Form Submission - ${contactData.subject}`,
         html: `
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
