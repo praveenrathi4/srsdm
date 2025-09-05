@@ -480,7 +480,7 @@ p {
 .contact-item {
     display: flex;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 0.5rem;
     margin-bottom: 2rem;
 }
 
@@ -488,6 +488,7 @@ p {
     color: #4a7c59;
     font-size: 1.2rem;
     margin-top: 0.2rem;
+    flex-shrink: 0;
 }
 
 .contact-item h4 {
