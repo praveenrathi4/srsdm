@@ -10,13 +10,13 @@ const transporter = nodemailer.createTransport({
 });
 
 // WhatsApp API configuration
-const WHATSAPP_PHONE = '+918233666311'; // Dr. MK Gahlot's phone number
+const WHATSAPP_PHONE = '+918233666311'; // DR MK GAHLOT's phone number
 
-// Send email notification to Dr. MK Gahlot
+// Send email notification to DR MK GAHLOT
 async function sendEmailNotification(contactData) {
     const mailOptions = {
         from: process.env.EMAIL_USER || 'your-email@gmail.com',
-        to: 'drmkgahlot@gmail.com', // Replace with Dr. MK Gahlot's email
+        to: 'drmkgahlot@gmail.com', // Replace with DR MK GAHLOT's email
         subject: `New Contact Form Submission - ${contactData.subject}`,
         html: `
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -55,12 +55,12 @@ async function sendConfirmationEmail(userEmail, userName) {
     const mailOptions = {
         from: process.env.EMAIL_USER || 'your-email@gmail.com',
         to: userEmail,
-        subject: 'Thank you for contacting Dr. MK Gahlot - SRSDM',
+        subject: 'Thank you for contacting DR MK GAHLOT - SRSDM',
         html: `
             <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
                 <h2 style="color: #2c5530;">Thank you for contacting us!</h2>
                 <p>Dear ${userName},</p>
-                <p>Thank you for reaching out to Dr. MK Gahlot at SRSDM. We have received your message and will get back to you as soon as possible.</p>
+                <p>Thank you for reaching out to DR MK GAHLOT at SRSDM. We have received your message and will get back to you as soon as possible.</p>
                 
                 <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
                     <h3 style="color: #4a7c59;">Our Contact Information:</h3>
@@ -78,7 +78,7 @@ async function sendConfirmationEmail(userEmail, userName) {
                 <div style="margin-top: 30px; padding: 15px; background: #e9ecef; border-radius: 8px;">
                     <p style="margin: 0; font-size: 14px; color: #666;">
                         Best regards,<br>
-                        Dr. MK Gahlot<br>
+                        DR MK GAHLOT<br>
                         SRSDM Clinic
                     </p>
                 </div>
@@ -143,7 +143,7 @@ export default async function handler(req, res) {
             });
         }
 
-        // Send email notification to Dr. MK Gahlot
+        // Send email notification to DR MK GAHLOT
         await sendEmailNotification({
             name,
             email,

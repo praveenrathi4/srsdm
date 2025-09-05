@@ -23,7 +23,7 @@ SESSION_SECRET=your-session-secret
 # Analytics (Optional)
 GOOGLE_ANALYTICS_ID=your-ga-id
 
-# Social Media Links (Actual URLs for Dr. MK Gahlot)
+# Social Media Links (Actual URLs for DR MK GAHLOT)
 FACEBOOK_URL=https://www.facebook.com/Drgahlot14/
 INSTAGRAM_URL=https://www.instagram.com/mgahlot14/
 YOUTUBE_URL=https://www.youtube.com/@DRMKGAHLOT
@@ -32,3 +32,4 @@ YOUTUBE_URL=https://www.youtube.com/@DRMKGAHLOT
 DOCTOR_EMAIL=drmkgahlot@gmail.com
 DOCTOR_PHONE=+918233666311
 CLINIC_ADDRESS=Gadsisar Road, Bikaner-334001, Rajasthan
+DOCTOR_NAME=DR MK GAHLOT
