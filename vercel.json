@@ -19,10 +19,14 @@
     }
   ],
   "routes": [
-    {
-      "src": "/api/contact",
-      "dest": "/api/contact.js"
-    },
+                {
+                "src": "/api/contact",
+                "dest": "/api/contact.js"
+            },
+            {
+                "src": "/api/admin",
+                "dest": "/api/admin.js"
+            },
     {
       "src": "/css/(.*)",
       "dest": "/css/$1"

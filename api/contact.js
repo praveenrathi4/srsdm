@@ -1,4 +1,5 @@
 const nodemailer = require('nodemailer');
+const { saveSubmission } = require('./submissions');
 
 // Email configuration
 const transporter = nodemailer.createTransport({
@@ -143,23 +144,16 @@ export default async function handler(req, res) {
             });
         }
 
+        // Save submission to local storage
+        const contactData = { name, email, phone, subject, message };
+        const savedSubmission = saveSubmission(contactData);
+        console.log('Contact form submission saved:', savedSubmission.id);
+
         // Send email notification to DR MK GAHLOT
-        await sendEmailNotification({
-            name,
-            email,
-            phone,
-            subject,
-            message
-        });
+        await sendEmailNotification(contactData);
 
         // Send WhatsApp notification (simulated)
-        await sendWhatsAppNotification({
-            name,
-            email,
-            phone,
-            subject,
-            message
-        });
+        await sendWhatsAppNotification(contactData);
 
         // Send confirmation email to the user
         await sendConfirmationEmail(email, name);
