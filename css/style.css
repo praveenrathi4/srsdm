@@ -854,6 +854,32 @@ p {
         gap: 2rem;
     }
 
+    .contact-info {
+        text-align: center;
+        padding: 0 1rem;
+    }
+
+    .contact-details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .contact-item {
+        text-align: center;
+        max-width: 300px;
+    }
+
+    .social-links {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
     .treatments-grid,
     .wellness-grid {
         grid-template-columns: 1fr;
