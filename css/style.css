@@ -882,12 +882,12 @@ p {
     }
     
     .contact-item {
-        gap: 0.2rem;
+        gap: 0.1rem;
     }
     
     .contact-item i {
-        font-size: 1.1rem;
-        margin-top: 0.1rem;
+        font-size: 1rem;
+        margin-top: 0.05rem;
     }
 
     .treatments-grid,
@@ -898,6 +898,18 @@ p {
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
+    }
+    
+    .footer-section {
+        text-align: center;
+    }
+    
+    .footer-contact {
+        text-align: center;
+    }
+    
+    .footer-social {
+        justify-content: center;
     }
 
     .whatsapp-btn {
