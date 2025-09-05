@@ -144,10 +144,15 @@ export default async function handler(req, res) {
             });
         }
 
-        // Save submission to local storage
+        // Save submission to local storage (with error handling)
         const contactData = { name, email, phone, subject, message };
-        const savedSubmission = saveSubmission(contactData);
-        console.log('Contact form submission saved:', savedSubmission.id);
+        try {
+            const savedSubmission = saveSubmission(contactData);
+            console.log('Contact form submission saved:', savedSubmission.id);
+        } catch (storageError) {
+            console.error('Failed to save submission to storage:', storageError);
+            // Continue with email/WhatsApp notifications even if storage fails
+        }
 
         // Send email notification to DR MK GAHLOT
         await sendEmailNotification(contactData);
