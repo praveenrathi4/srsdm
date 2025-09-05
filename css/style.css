@@ -883,11 +883,21 @@ p {
     
     .contact-item {
         gap: 0.1rem;
+        align-items: center;
     }
     
     .contact-item i {
         font-size: 1rem;
-        margin-top: 0.05rem;
+        margin-top: 0;
+        flex-shrink: 0;
+    }
+    
+    .contact-item > div {
+        text-align: left;
+    }
+    
+    .contact-item h4 {
+        margin-bottom: 0.3rem;
     }
 
     .treatments-grid,
