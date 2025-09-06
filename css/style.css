@@ -125,10 +125,41 @@ p {
     align-items: center;
 }
 
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 135px;
+    height: 60px;
+    object-fit: contain;
+    background: transparent;
+    /* Remove white background from PNG */
+    mix-blend-mode: multiply;
+    filter: contrast(1.2) brightness(0.9);
+    /* Alternative approach if mix-blend-mode doesn't work */
+    -webkit-filter: contrast(1.2) brightness(0.9);
+}
+
 .nav-logo h2 {
     color: #2c5530;
     margin: 0;
     font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.logo-subtitle {
+    color: #4a7c59;
+    font-size: 0.8rem;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.logo-brand {
+    color: #666;
+    font-size: 0.7rem;
+    font-weight: 300;
 }
 
 .nav-logo span {
@@ -818,6 +849,14 @@ p {
 
     .nav-menu li {
         margin: 1rem 0;
+    }
+    
+    .logo-image {
+        width: 100px;
+        height: 45px;
+        background: transparent;
+        mix-blend-mode: multiply;
+        filter: contrast(1.2) brightness(0.9);
     }
 
     .hamburger.active .bar:nth-child(2) {
