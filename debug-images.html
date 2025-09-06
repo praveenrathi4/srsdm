@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Images - SRSDM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+        .debug-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .debug-section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .success { border-color: #28a745; background: #d4edda; }
+        .error { border-color: #dc3545; background: #f8d7da; }
+        .warning { border-color: #ffc107; background: #fff3cd; }
+        .info { border-color: #17a2b8; background: #d1ecf1; }
+        
+        .image-test {
+            margin: 10px 0;
+            text-align: center;
+        }
+        .image-test img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .path-info {
+            font-family: monospace;
+            background: #f8f9fa;
+            padding: 5px;
+            border-radius: 3px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="debug-container">
+        <h1>🔍 Image Debug - SRSDM Local Server</h1>
+        
+        <div class="debug-section info">
+            <h3>📁 File Structure Check</h3>
+            <p>Make sure your files are in this exact structure:</p>
+            <div class="path-info">
+                srsdm/v3/<br>
+                ├── assets/<br>
+                │   └── images/<br>
+                │       ├── ayurveda.jpg<br>
+                │       └── dr-mk-gahlot.png<br>
+                ├── index.html<br>
+                ├── css/style.css<br>
+                └── debug-images.html
+            </div>
+        </div>
+        
+        <div class="debug-section">
+            <h3>🖼️ Image Loading Tests</h3>
+            
+            <div class="image-test">
+                <h4>Ayurveda Background (JPG)</h4>
+                <img src="assets/images/ayurveda.jpg" alt="Ayurveda" onload="showStatus('ayurveda-jpg', 'success')" onerror="showStatus('ayurveda-jpg', 'error')">
+                <div id="ayurveda-jpg" class="path-info">Testing: assets/images/ayurveda.jpg</div>
+            </div>
+            
+            <div class="image-test">
+                <h4>DR MK GAHLOT (PNG)</h4>
+                <img src="assets/images/dr-mk-gahlot.png" alt="DR MK GAHLOT" onload="showStatus('doctor-png', 'success')" onerror="showStatus('doctor-png', 'error')">
+                <div id="doctor-png" class="path-info">Testing: assets/images/dr-mk-gahlot.png</div>
+            </div>
+            
+            <div class="image-test">
+                <h4>DR MK GAHLOT (JPG - Alternative)</h4>
+                <img src="assets/images/dr-mk-gahlot.jpg" alt="DR MK GAHLOT JPG" onload="showStatus('doctor-jpg', 'success')" onerror="showStatus('doctor-jpg', 'error')">
+                <div id="doctor-jpg" class="path-info">Testing: assets/images/dr-mk-gahlot.jpg</div>
+            </div>
+        </div>
+        
+        <div class="debug-section">
+            <h3>🔧 Troubleshooting Steps</h3>
+            <ol>
+                <li><strong>Check file names:</strong> Make sure they match exactly (case-sensitive)</li>
+                <li><strong>Check file extensions:</strong> .jpg vs .png vs .jpeg</li>
+                <li><strong>Check file size:</strong> Large images might load slowly</li>
+                <li><strong>Clear browser cache:</strong> Ctrl+F5 or Cmd+Shift+R</li>
+                <li><strong>Check server logs:</strong> Look at your Node.js console for errors</li>
+                <li><strong>Try different browser:</strong> Test in Chrome, Firefox, Edge</li>
+            </ol>
+        </div>
+        
+        <div class="debug-section">
+            <h3>📊 Server Information</h3>
+            <div id="server-info" class="path-info">Loading server info...</div>
+        </div>
+    </div>
+
+    <script>
+        function showStatus(elementId, status) {
+            const element = document.getElementById(elementId);
+            const section = element.closest('.image-test');
+            
+            if (status === 'success') {
+                element.textContent = '✅ Image loaded successfully!';
+                section.classList.add('success');
+            } else {
+                element.textContent = '❌ Image failed to load!';
+                section.classList.add('error');
+            }
+        }
+        
+        // Show server information
+        document.getElementById('server-info').innerHTML = 
+            'Current URL: ' + window.location.href + '<br>' +
+            'Protocol: ' + window.location.protocol + '<br>' +
+            'Host: ' + window.location.host + '<br>' +
+            'Path: ' + window.location.pathname;
+    </script>
+</body>
+</html>
